@@ -9,7 +9,8 @@ def add_chocolate(shopping_list: list):
     Returns:
         - the same list, with the string "chocolate" added to the end
     """
-    pass
+    shopping_list.append("chocolate")
+    return shopping_list
 
 def lou_bega(lyrics_list: list):
     """This function accepts a list of strings and adds the words 
@@ -36,7 +37,17 @@ def lou_bega(lyrics_list: list):
             "A little bit of Rita's all I need"
         ]
     """
-    pass
+
+    for index in range(len(lyrics_list)):
+        lyrics_list[index] = f"A little bit of {lyrics_list[index]}"
+
+    return lyrics_list
+
+print(lou_bega([
+            "Monica in my life", 
+            "Erica by my side", 
+            "Rita's all I need"
+        ]))
 
 def assemble_guest_list():
     """This function repeatedly prompts the user for the name of a dinner guest.
@@ -49,7 +60,14 @@ def assemble_guest_list():
     Returns:
         - a list of strings supplied by the user
     """
-    pass
+    guest_list = []
+    guest_name = input("Enter a guests name:")
+    while guest_name != "":
+        guest_list.append(guest_name)
+        guest_name = input("Enter a guests name:")
+
+    return guest_list
+print(assemble_guest_list())
 
 def is_prime(some_number: int): # A bit trickier!
     """This function tests to see if the input is a prime number.

@@ -140,6 +140,6 @@ class TestCase(unittest.TestCase):
                 msg=f"\nInput: {case}\nExpected result: {expected_result}\nActual result: {actual_result}"    
             )
 
-runner = unittest.TextTestRunner(verbosity=2)
+# runner = unittest.TextTestRunner(verbosity=2)
 
-runner.run(unittest.TestSuite((unittest.TestLoader().loadTestsFromTestCase(TestCase))))
+# runner.run(unittest.TestSuite((unittest.TestLoader().loadTestsFromTestCase(TestCase))))
